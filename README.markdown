@@ -22,6 +22,8 @@ ioreg -l | awk -F\" '/board-id/ { print $4 }'
 
 Download the AHT for your computer model and use the contents to restore the `/System/Library/CoreServices/.diagnostics` folder, then reboot while holding `d` to start the diagnostic tools. Alternatively you may try with a bootable USB stick, as described below. This is also the preferred way on OS X 10.11 or later, where the System Integrity Protection (SIP) no longer allows writing to system folders.
 
+When trying to open an old dmg you may get the error 'legacy image should be converted'. To convert it to a newer format, open Disk Utility, in the menu _Images_ click on _Convert_ and select the dmg to convert and save it under a new name.
+
 Note that there is no one-to-one correspondence between hardware model and AHT. For some models no hardware test could be found, while others seem to have multiple AHT. As the differences are not clear, feel free to try them out, to see which one works best for your hardware.
 
  Run AHT from bootable USB stick
@@ -164,7 +166,7 @@ sudo bless --folder /Volumes/USBstick/ --file /Volumes/USBstick/System/Library/C
 
 ### Misc
 
-* [unidentified](http://download.info.apple.com/Apple_Hardware_Test/018-2393-A.dmg)
+* [unidentified](http://download.info.apple.com/Apple_Hardware_Test/018-2393-A.dmg), possibly [MacBook1,1 Mac-F4208CC8](https://github.com/upekkha/AppleHardwareTest/issues/31)
 * [unidentified](http://download.info.apple.com/Apple_Hardware_Test/018-2418-A.dmg)
 * [Bundle](http://download.info.apple.com/Apple_Hardware_Test/018-3169-A.dmg)
   - MacBook3,1     Mac-F22788C8
